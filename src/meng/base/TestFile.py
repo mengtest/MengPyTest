@@ -7,7 +7,7 @@ Created on 2014年4月23日
 
 @author: Administrator
 '''
-print("文件操作测试！！！")
+print("文件操作测试!!!")
 
 # 文件操作可以使用内置的函数open来进行。
 # open(文件名[,mode])返回一个文件对像。
@@ -21,16 +21,37 @@ print("文件操作测试！！！")
 #  文件对象的属性:file.name:文件名 file.mode:文件打开的模式
 
 nowpath = os.getcwd()
-fname = "../../" +nowpath + "/files/t.txt"
+fname = "t2.txt"
 print fname
-# try:
-#     fobj = open(fname, 'w');
-# except IOError,e:
-#     print "file open error",e
-# else:
-#     txts =[];
-#     txts.append("tom 22")
-#     txts.append("sdfsadf 10")
-#     fobj.writelines(['%s%s' % (x, os.linesep) for x in txts])
-#     fobj.close()
-print os.p
+try:
+    fobj = open(fname, 'w');
+except IOError,e:
+    print "file open error",e
+else:
+    txts =[];
+    txts.append("tom 22")
+    txts.append("sdfsadf 10")
+    fobj.writelines(['%s%s' % (x, os.linesep) for x in txts])
+    fobj.close()
+
+try:
+    f = open("t.txt", 'w')
+except IOError,e:
+    print "file open error",e
+else:
+    f.write("txt\n")
+    f.write("dfasfjaskdfj")
+    f.close()
+
+#读取文件
+print "读取文件====="    
+f2 = open("t.txt", 'r')
+try:
+    f_content = f2.read();
+except IOError,e:
+        print "file open error",e
+finally:
+    f2.close();
+print(unicode(f_content, 'UTF-8'))
+    
+
