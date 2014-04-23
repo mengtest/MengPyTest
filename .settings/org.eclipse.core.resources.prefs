@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/HelloWorld.py=utf-8
+encoding//src/meng/base/TestContaine.py=utf-8
+encoding//src/meng/base/TestFile.py=utf-8
+encoding//src/meng/base/TestFunction.py=utf-8
+encoding//src/meng/base/TestModule.py=utf-8
